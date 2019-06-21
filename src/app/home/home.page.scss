@@ -1,1 +1,59 @@
+@media (max-width: 500px) {
+	.header-button {
+		display: none;
+	}
+	.header-button-icon {
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #f0ad4e;
+		margin-right: 10px;
+		color: white;
+		font-size: 20px;
+	}
+}
 
+@media (min-width: 500px) {
+	.header-button {
+		padding: 10px;
+		border-radius: 5px;
+		text-transform: uppercase;
+		background-color: #f0ad4e;
+		margin-right: 10px;
+		color: white;
+	}
+	.header-button-icon {
+		display: none;
+	}
+}
+
+.card-title {
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0.5;
+	font-size: 8vh;
+	height: 10vh;
+}
+
+.card-date {
+	font-weight: bold;
+	padding: 5px;
+}
+
+.card-title-unlock {
+	background-color: green;
+	color: white;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+* {
+	-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+ 				-moz-user-select: none; /* Firefox */
+					-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none;
+}

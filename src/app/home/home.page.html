@@ -1,14 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header class="header">
+  <ion-toolbar color="dark">
+    <ion-title>AlphaBet</ion-title>
+		<!-- <button slot="end" class="header-button">
+			Se Déconnecter
+		</button>
+		<button slot="end" class="header-button-icon">
+			<ion-icon name="ios-log-out"></ion-icon>
+		</button> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+	<ion-grid>
+
+		<ion-row class="center">
+			<ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="2" *ngFor="let letter of letters; let i = index">
+				<ion-card class="card" (press)="pressed(letter, i)">
+					<ion-card-title class="card-title" [ngClass]="letter.count == 0 ? '' : 'card-title-unlock'">
+						{{letter.name}}
+					</ion-card-title>
+					<ion-card-subtitle class="card-date" *ngIf="letter.created_at">
+						{{letter.created_at}}
+					</ion-card-subtitle>
+					<ion-card-content class="card-content">
+						Nombre de réussite: <b>{{letter.count}}</b>
+					</ion-card-content>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
 </ion-content>
