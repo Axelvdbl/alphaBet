@@ -10,7 +10,7 @@ export class AuthService {
 	headers: Headers;
 
 	// baseURL = 'http://localhost:3000/api/v1/auth_user';
-	baseURL = 'https://prod-alpha-bet-api-v1.herokuapp.com/api/v1/auth_user';
+	baseURL = 'https://prod-alphabet-api.herokuapp.com/api/v1/auth_user';
 
   constructor (private http: Http) {
 		this.setHeaders();
